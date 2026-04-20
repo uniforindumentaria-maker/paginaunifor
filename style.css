@@ -1084,3 +1084,139 @@ footer {
   color: var(--primary);
 }
 ``
+
+
+/* --- Estilos Página de Condiciones --- */
+
+.terms-hero {
+    background-image: linear-gradient(rgba(3, 18, 150, 0.7), rgba(3, 18, 150, 0.7)), url('img/banner-condiciones.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 80px 5%;
+    text-align: center;
+    color: var(--white);
+}
+
+.terms-container {
+    max-width: 900px;
+    margin: -50px auto 80px; /* Sube un poco sobre el banner */
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.term-card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 7, 88, 0.08);
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    border-left: 5px solid var(--accent); /* Detalle en color Oro */
+    transition: transform 0.3s ease;
+}
+
+.term-card:hover {
+    transform: translateY(-5px);
+}
+
+.term-icon {
+    font-size: 2.5rem;
+    color: var(--secondary); /* Tu azul #031296 */
+    min-width: 60px;
+}
+
+.term-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.term-content p {
+    color: #555;
+    line-height: 1.7;
+}
+
+.payment-methods {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.payment-methods span {
+    background: var(--gray);
+    padding: 8px 15px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.terms-note {
+    background: #fff8e1; /* Un color crema suave para resaltar la nota */
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px dashed var(--accent);
+    text-align: center;
+    color: #795548;
+}
+
+/* Ajuste Celular */
+@media (max-width: 768px) {
+    .term-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        padding: 30px 20px;
+    }
+    
+    .term-icon {
+        margin: 0 auto;
+    }
+
+    .payment-methods {
+        justify-content: center;
+    }
+}
+
+/* --- Ajuste del Hero para centrado perfecto --- */
+.terms-hero, .hiring-hero {
+    height: 60vh; /* Ajustamos altura para que no sea tan gigante */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 5%;
+    overflow: hidden; /* Evita cualquier desplazamiento raro */
+}
+
+.hero-content {
+    width: 100%; /* Obligamos al contenido a ocupar todo el ancho */
+    max-width: 1000px; /* Pero con un tope para que no se estiren tanto las líneas */
+    margin: 0 auto;
+}
+
+.terms-hero h1, .hiring-hero h1 {
+    margin: 0 auto 15px auto !important; /* Forzamos el margen automático a los costados */
+    display: block;
+    width: 100%;
+    font-size: 3.5rem;
+    line-height: 1.2;
+}
+
+.terms-hero p, .hiring-hero p {
+    margin: 0 auto;
+    max-width: 600px; /* Para que el texto de abajo no quede en una sola línea eterna */
+}
+
+@media (max-width: 768px) {
+    .terms-hero h1, .hiring-hero h1 {
+        font-size: 2.2rem;
+    }
+}
