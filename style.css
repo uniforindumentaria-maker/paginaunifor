@@ -1220,11 +1220,6 @@ footer {
         font-size: 2.2rem;
     }
 }
-
-
-
-
-
 @media (max-width: 768px) {
   .nav-menu {
     position: absolute;
